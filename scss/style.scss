@@ -1,9 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap');
+
+$main-color: #8daae5;
+$default-font: 'arial', 'sans-serif';
+$special-font: 'PT sans', 'Roboto', 'arial', 'sans-serif';
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(124, 124, 124);
+html {
+    font-size: 10px;
+    background-color: $main-color;
+    font-family: $default-font;
 }
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; // elementy, które sie nie mieszczą przejdą niżej
+    font-size: 2rem;
+    max-width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0 0 4px 0 black;
+    align-content: flex-start;
+    min-height: 100vh;
+
+    .logo {
+        flex-basis: 70px;
+        // flex-basis: calc(100% / 3); // alternatywa dla width
+        // flex-grow: 1; // zajmij całą możliwą przestrzeń, zamiast flex basis powyzej
+        padding: 10px;
+
+        &__image {
+            width: 100%;
+            display: block;
+            box-shadow: 0 0 10px 0 rgb(8, 78, 99);
+            margin: 10px 15px;
+        }
+    }
+
+    .search {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &__input {
+            width: 30%; // albo flex-basis !!!
+            height: 50%;
+            max-height: 50px;
+            font-size: 1.6rem;
+            padding: 0 5px;
+            &:focus {
+                box-shadow: 0 0 1px 0 black;
+            }
+        }
+        &__btn {
+            width: 20%;
+            text-transform: uppercase;
+            padding: 5px;
+            margin: 0 10px;
+            height: 50%;
+            max-height: 50px;
+            letter-spacing: 2px;
+            &:hover {
+                background-color: black;
+                cursor: pointer;
+                color: white;
+                transition: .4s;
+            }
+        }
+    }
+
+    .settings {
+        display: flex;
+        align-items: center;
+        flex-basis: 8vw;
+        justify-content: space-around;
+        margin-right: 10px;
+
+        &__icon-link {
+            color: rgb(25, 130, 172);
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    .menu {
+        flex-basis: 100%;
+        background-color: rgb(13, 133, 170);
+        font-family: $special-font;
+        margin-top: 10px;
+        height: 70px;
+        padding: 15px 50px 15px 80px;
+
+        &__list {
+            display: flex;
+            // justify-content: space-around;
+            list-style: none;
+        }
+        &__item {
+            margin: 0 20px;
+            font-size: 2rem;
+            text-transform: uppercase;
+            line-height: 4rem;
+            // transition: .3s;
+            &:hover {
+                border-bottom: 2px solid white;
+            }
+            &:nth-last-child(1) {
+                margin-left: auto;
+                border: 2px solid rgb(202, 202, 202);
+                &:hover {
+                    border-color: greenyellow;
+                }
+                .menu__link {
+                    padding: 0 22px;
+                }
+            }
+        }
+        &__link {
+            // padding: 0 10px;
+            display: block; // sprawiamy, że cały element jest linkiem
+            color: white;
+            text-decoration: none;
+            
+        }
+    }
+
+    .main-articles {
+        background-color: darkred;
+        flex-basis: 60vh;
+        flex-basis: 100%;
+    }
+
+    .article-list {
+        background-color: gainsboro;
+        flex-basis: 100%;
+    }
+
+    .footer {
+        background-color: gold;
+        flex-basis: 100%;
+    }
+}
+

@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flexbox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="logo"><a href="#">
+            <img class="logo__image" src="img/logo.png" alt=""></a>
+        </div>
+        <form action="/" class="search">
+            <input type="text" class="search__input" placeholder="Podaj szukaną frazę"><button
+                class="search__btn">Wyszukaj</button></form>
+        <div class="settings">
+            <a class="settings__icon-link" href="#"><i class="fa fa-sliders" aria-hidden="true"></i></a>
+            <a class="settings__icon-link" href="#"><i class="fa fa-ravelry" aria-hidden="true"></i></a>
+            <a class="settings__icon-link" href="#"><i class="fa fa-sliders" aria-hidden="true"></i></a>
 
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">products</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">future</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">GO!</a></li>
+            </ul>
+        </nav>
+        <section class="main-articles">Art główne</section>
+        <section class="article-list">Lista art</section>
+        <footer class="footer">Stopka</footer>
+    </div>
 </body>
 
 </html>
